@@ -12,6 +12,7 @@ def mergesort(array):
     right = array[mid:]
     
     return merge(mergesort(left),mergesort(right))
+    #recursive 
 
 def merge(left,right):
     result = []
