@@ -20,9 +20,17 @@ class Graph:
             print(f"{node} --> {self.adjacentLists[node]}")
         
         
-    def showConnection():
-        allNodes = object.keys
-        pass
+    def showConnection(self):
+        """
+        Shows the connections (edges) of the graph.
+        """
+        print("\nDisplaying all connections:")
+        for node in self.adjacentLists:
+            for neighbor in self.adjacentLists[node]:
+                # To avoid printing each edge twice (e.g., 1-2 and 2-1)
+                # a more robust implementation would use a set of visited edges,
+                # but for simplicity, we'll just print all connections.
+                print(f"Connection from {node} to {neighbor}")
     
     
 g = Graph()
@@ -30,8 +38,8 @@ g.addVertex(1)
 g.addVertex(2)
 g.addVertex(3)
 
-g.addEdge(1, 2)
-g.addEdge(2, 3)
-g.addEdge(1, 3)
+g.addEdges(1, 2)
+g.addEdges(2, 3)
+g.addEdges(1, 3)
 
 g.showGraph()
