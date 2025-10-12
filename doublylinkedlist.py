@@ -1,4 +1,6 @@
-"""A Linked lists contains head and tail with
+"""
+
+A Linked lists contains head and tail with
 a value of [value , next].
 
 Operations :
